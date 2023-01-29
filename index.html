@@ -1630,10 +1630,10 @@
                 <div class="inner">
                     <header id="header">
                         <ul id="buttons01" class="buttons">
-                            <li><a href="#section02" class="button n01">⌕</a></li>
+                            <li><a href="#home" class="button n01">⌕</a></li>
                             <li><a href="#section03" class="button n02">♡</a></li>
                             <li><a href="#section04" class="button n03">⟣</a></li>
-                            <li><a href="#home" class="button n04">⌗</a></li>
+                            <li><a href="#section02" class="button n04">⌗</a></li>
                             <li><a href="#section06" class="button n05">＠</a></li>
                         </ul>
                     </header>
@@ -1650,7 +1650,8 @@
                             <span class="p">
                                 feel free to give a nickname if we are irls<br />
                                 <em>this carrd looks better on computer</em><br />
-                                click 5 buttons above for info ab me :)
+                                click 5 buttons above for info ab me :)<br />
+                                ⇣⇣ discord server, moosic, insta
                             </span>
                         </p>
                         <ul id="icons01" class="icons">
@@ -1665,8 +1666,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="n03" href="https://www.instagram.com/pinezy_/" aria-label="Instagram">
-                                    <svg><use xlink:href="#icon-85976685de3e4af37529a1ce5d57d2a7"></use></svg><span class="label">Discord</span>
+                                <a class="n03" href="https://instagram.com/pinezy_?igshid=ZDdkNTZiNTM=" aria-label="Instagram">
+                                    <svg><use xlink:href="#icon-85976685de3e4af37529a1ce5d57d2a7"></use></svg><span class="label">Instagram</span>
                                 </a>
                             </li>
                         </ul>
@@ -1678,7 +1679,7 @@
                                     <p id="text01">
                                         <span class="p">
                                             ♡．edgy, emo, girly pops !<em>?</em> jk. quirky, fun, happy, irrational.<br />
-                                            i like (and am close with) most friends who ik irl. if idk you irl we probably won't be close but don't take it personally!<br />
+                                            i like (and am close with) most friends who ik irl.<br />
                                             ✄ - - - - - - - - - - - - - - - - - - - -<br />
                                             <code>⛓</code> hates: haters (obvs 🙄), homophobic, racist, sexist, can't /j
                                         </span>
@@ -1698,7 +1699,7 @@
                                             ✄ - - - - - - - - - - - - - - - - - - - -<br />
                                             i love cats send me cat pics .. ☆<br />
                                             i SUCK at math. really bad. help...<br />
-                                            i do some things on discord :)
+                                            i do things. im bad at 99% of them
                                         </span>
                                     </p>
                                 </div>
@@ -1725,10 +1726,10 @@
                     <section id="section06-section">
                         <p id="text05">
                             <span class="p">
-                                ︵︵．<code> my art! </code><br />
+                                ︵︵．<code> my art and gfx! </code><br />
                                 all of my art is not free to use ♪<br />
-                                please don't copy or take inspo.<br />
-                                i do commissions! lmk :)
+                                i draw "squiggly aesthetic things" as maxwell so eloquently states<br />
+                                not good at art or gfx tho :')
                             </span>
                         </p>
                         <div id="gallery01" class="gallery">
@@ -1737,56 +1738,28 @@
                                     <li>
                                         <span class="frame">
                                             <img
-                                                src="portfolio/1.png"
-                                            />
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="frame">
-                                            <img
-                                                src="portfolio/2.png"
-                                            />
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="frame">
-                                            <img
-                                                src="portfolio/3.png"
-                                            />
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="frame">
-                                            <img
                                                 src="portfolio/4.png"
                                             />
                                         </span>
                                     </li>
-									<li>
+                                    <li>
                                         <span class="frame">
                                             <img
                                                 src="portfolio/5.png"
                                             />
                                         </span>
                                     </li>
-									<li>
-                                        <span class="frame">
-                                            <img
-                                                src="portfolio/6.png"
-                                            />
-                                        </span>
-                                    </li>
-									<li>
+                                    <li>
                                         <span class="frame">
                                             <img
                                                 src="portfolio/7.png"
                                             />
                                         </span>
                                     </li>
-									<li>
+                                    <li>
                                         <span class="frame">
                                             <img
-                                                src="portfolio/8.png"
+                                                src="portfolio/8.jpg"
                                             />
                                         </span>
                                     </li>
@@ -1817,7 +1790,7 @@
                     </section>
                     <footer id="footer">
                         <div id="credits" class="icc-credits">
-                            <span><a href="https://nooz.farted.net">nooz wuz here</a></span>
+                            <span><a href="https://nooz.farted.net/">Modified by Nooz</a></span>
                         </div>
                     </footer>
                 </div>
@@ -2068,9 +2041,11 @@
                 };
                 on("load", function () {
                     setTimeout(function () {
-                        $body.className = $body.className.replace(/\bis-loading\b/, "is-playing");
+                        $body.classList.remove("is-loading");
+                        $body.classList.add("is-playing");
                         setTimeout(function () {
-                            $body.className = $body.className.replace(/\bis-playing\b/, "is-ready");
+                            $body.classList.remove("is-playing");
+                            $body.classList.add("is-ready");
                         }, 1250);
                     }, 100);
                 });
@@ -2090,8 +2065,6 @@
                         k,
                         locked = false,
                         scrollPointParent = function (target) {
-                            var target;
-                            target = event.target;
                             while (target) {
                                 if (target.parentElement && target.parentElement.tagName == "SECTION") break;
                                 target = target.parentElement;
@@ -2192,6 +2165,52 @@
                             if (!section || section.tagName != "SECTION") return;
                             location.href = "#" + section.id.replace(/-section$/, "");
                         },
+                        activateSection = function (section, scrollPoint) {
+                            var sectionHeight, currentSection, currentSectionHeight, name, hideHeader, hideFooter, disableAutoScroll, ee, k;
+                            if (!section.classList.contains("inactive")) {
+                                name = section ? section.id.replace(/-section$/, "") : null;
+                                disableAutoScroll = name ? name in sections && "disableAutoScroll" in sections[name] && sections[name].disableAutoScroll : false;
+                                if (scrollPoint) scrollToElement(scrollPoint);
+                                else if (!disableAutoScroll) scrollToElement(null);
+                                return false;
+                            } else {
+                                locked = true;
+                                if (location.hash == "#home") history.replaceState(null, null, "#");
+                                name = section ? section.id.replace(/-section$/, "") : null;
+                                hideHeader = name ? name in sections && "hideHeader" in sections[name] && sections[name].hideHeader : false;
+                                hideFooter = name ? name in sections && "hideFooter" in sections[name] && sections[name].hideFooter : false;
+                                disableAutoScroll = name ? name in sections && "disableAutoScroll" in sections[name] && sections[name].disableAutoScroll : false;
+                                if (header && hideHeader) {
+                                    header.classList.add("hidden");
+                                    header.style.display = "none";
+                                }
+                                if (footer && hideFooter) {
+                                    footer.classList.add("hidden");
+                                    footer.style.display = "none";
+                                }
+                                currentSection = $("#main > .inner > section:not(.inactive)");
+                                currentSection.classList.add("inactive");
+                                currentSection.classList.remove("active");
+                                currentSection.style.display = "none";
+                                unloadElements(currentSection);
+                                if (header && !hideHeader) {
+                                    header.style.display = "";
+                                    header.classList.remove("hidden");
+                                }
+                                if (footer && !hideFooter) {
+                                    footer.style.display = "";
+                                    footer.classList.remove("hidden");
+                                }
+                                section.classList.remove("inactive");
+                                section.classList.add("active");
+                                section.style.display = "";
+                                trigger("resize");
+                                loadElements(section);
+                                if (scrollPoint) scrollToElement(scrollPoint, "instant");
+                                else if (!disableAutoScroll) scrollToElement(null, "instant");
+                                locked = false;
+                            }
+                        },
                         sections = {};
                     window._nextScrollPoint = doNextScrollPoint;
                     window._previousScrollPoint = doPreviousScrollPoint;
@@ -2256,74 +2275,30 @@
                         if (initialScrollPoint) scrollToElement(initialScrollPoint, "instant");
                     });
                     on("hashchange", function (event) {
-                        var section, scrollPoint, id, sectionHeight, currentSection, currentSectionHeight, name, hideHeader, hideFooter, disableAutoScroll, h, e, ee, k;
+                        var section, scrollPoint, h, e;
                         if (locked) return false;
                         h = thisHash();
                         if (h && !h.match(/^[a-zA-Z0-9\-]+$/)) return false;
                         if ((e = $('[data-scroll-id="' + h + '"]'))) {
                             scrollPoint = e;
                             section = scrollPoint.parentElement;
-                            id = section.id;
                         } else if ((e = $("#" + (h ? h : "home") + "-section"))) {
                             scrollPoint = null;
                             section = e;
-                            id = section.id;
                         } else {
                             scrollPoint = null;
                             section = $("#" + "home" + "-section");
-                            id = section.id;
                             history.replaceState(undefined, undefined, "#");
                         }
                         if (!section) return false;
-                        if (!section.classList.contains("inactive")) {
-                            name = section ? section.id.replace(/-section$/, "") : null;
-                            disableAutoScroll = name ? name in sections && "disableAutoScroll" in sections[name] && sections[name].disableAutoScroll : false;
-                            if (scrollPoint) scrollToElement(scrollPoint);
-                            else if (!disableAutoScroll) scrollToElement(null);
-                            return false;
-                        } else {
-                            locked = true;
-                            if (location.hash == "#home") history.replaceState(null, null, "#");
-                            name = section ? section.id.replace(/-section$/, "") : null;
-                            hideHeader = name ? name in sections && "hideHeader" in sections[name] && sections[name].hideHeader : false;
-                            hideFooter = name ? name in sections && "hideFooter" in sections[name] && sections[name].hideFooter : false;
-                            disableAutoScroll = name ? name in sections && "disableAutoScroll" in sections[name] && sections[name].disableAutoScroll : false;
-                            if (header && hideHeader) {
-                                header.classList.add("hidden");
-                                header.style.display = "none";
-                            }
-                            if (footer && hideFooter) {
-                                footer.classList.add("hidden");
-                                footer.style.display = "none";
-                            }
-                            currentSection = $("#main > .inner > section:not(.inactive)");
-                            currentSection.classList.add("inactive");
-                            currentSection.classList.remove("active");
-                            currentSection.style.display = "none";
-                            unloadElements(currentSection);
-                            if (header && !hideHeader) {
-                                header.style.display = "";
-                                header.classList.remove("hidden");
-                            }
-                            if (footer && !hideFooter) {
-                                footer.style.display = "";
-                                footer.classList.remove("hidden");
-                            }
-                            section.classList.remove("inactive");
-                            section.classList.add("active");
-                            section.style.display = "";
-                            trigger("resize");
-                            loadElements(section);
-                            if (scrollPoint) scrollToElement(scrollPoint, "instant");
-                            else if (!disableAutoScroll) scrollToElement(null, "instant");
-                            locked = false;
-                        }
+                        activateSection(section, scrollPoint);
                         return false;
                     });
                     on("click", function (event) {
                         var t = event.target,
                             tagName = t.tagName.toUpperCase(),
-                            scrollPoint;
+                            scrollPoint,
+                            section;
                         switch (tagName) {
                             case "IMG":
                             case "SVG":
@@ -2344,7 +2319,13 @@
                         if (t.tagName == "A" && t.getAttribute("href").substr(0, 1) == "#") {
                             if (!!(scrollPoint = $('[data-scroll-id="' + t.hash.substr(1) + '"][data-scroll-invisible="1"]'))) {
                                 event.preventDefault();
-                                scrollToElement(scrollPoint);
+                                section = scrollPoint.parentElement;
+                                if (section.classList.contains("inactive")) {
+                                    history.pushState(null, null, "#" + section.id.replace(/-section$/, ""));
+                                    activateSection(section, scrollPoint);
+                                } else {
+                                    scrollToElement(scrollPoint);
+                                }
                             } else if (t.hash == window.location.hash) {
                                 event.preventDefault();
                                 history.replaceState(undefined, undefined, "#");
@@ -2448,7 +2429,15 @@
                         scrollEvents.items.forEach(function (item) {
                             var bcr, elementTop, elementBottom, state, a, b;
                             if (!item.enter && !item.leave) return true;
-                            if (!item.triggerElement || item.triggerElement.offsetParent === null) return true;
+                            if (!item.triggerElement) return true;
+                            if (item.triggerElement.offsetParent === null) {
+                                if (item.state == true && item.leave) {
+                                    item.state = false;
+                                    item.leave.apply(item.element);
+                                    if (!item.enter) item.leave = null;
+                                }
+                                return true;
+                            }
                             bcr = item.triggerElement.getBoundingClientRect();
                             elementTop = top + Math.floor(bcr.top);
                             elementBottom = elementTop + bcr.height;
